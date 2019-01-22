@@ -17,7 +17,7 @@ pipeline{
 
         stage('PROD') {
             options{
-                timeout(time: 1, unit: 'HOURS')  //if user input not given in 1 hour stage will fail. you son't have to specify TO
+                timeout(time: 1, unit: 'HOURS')  //if user input not given in 1 hour stage will fail. not mandatory to set TO
             }   
             when{
                 environment name: 'SHOULD_PROMOTE', value: 'YES' 
